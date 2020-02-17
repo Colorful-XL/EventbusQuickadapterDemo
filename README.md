@@ -1,0 +1,2 @@
+# EventbusQuickadapterDemo
+练习Demo；结合EventBus，约束布局，BasequickAdapter实现多级列表，Permissiondispatcher动态获取权限等
