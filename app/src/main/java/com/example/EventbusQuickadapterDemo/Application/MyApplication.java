@@ -1,4 +1,4 @@
-package com.example.intsigdemo.Application;
+package com.example.EventbusQuickadapterDemo.Application;
 
 import android.app.Application;
 

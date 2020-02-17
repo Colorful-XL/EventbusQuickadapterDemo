@@ -1,4 +1,4 @@
-package com.example.intsigdemo.Avtivity;
+package com.example.EventbusQuickadapterDemo.Avtivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,10 +7,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.chad.library.adapter.base.entity.MultiItemEntity;
-import com.example.intsigdemo.Bean.RecyclerChildData;
-import com.example.intsigdemo.Bean.RecyclerData;
-import com.example.intsigdemo.R;
-import com.example.intsigdemo.RecyclerViewAdapter.RecyclerAdapter;
+import com.example.EventbusQuickadapterDemo.Bean.RecyclerChildData;
+import com.example.EventbusQuickadapterDemo.Bean.RecyclerData;
+import com.example.EventbusQuickadapterDemo.R;
+import com.example.EventbusQuickadapterDemo.RecyclerViewAdapter.RecyclerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

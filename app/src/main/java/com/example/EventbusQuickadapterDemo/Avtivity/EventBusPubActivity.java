@@ -1,12 +1,10 @@
-package com.example.intsigdemo.Avtivity;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.EventbusQuickadapterDemo.Avtivity;
 
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.example.intsigdemo.R;
-import com.example.intsigdemo.Router.MessageEvent;
+import com.example.EventbusQuickadapterDemo.R;
+import com.example.EventbusQuickadapterDemo.Router.MessageEvent;
 
 import org.greenrobot.eventbus.EventBus;
 

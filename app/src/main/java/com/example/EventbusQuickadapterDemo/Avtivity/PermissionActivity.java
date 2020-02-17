@@ -1,4 +1,4 @@
-package com.example.intsigdemo.Avtivity;
+package com.example.EventbusQuickadapterDemo.Avtivity;
 
 
 import android.Manifest;
@@ -12,7 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 
-import com.example.intsigdemo.R;
+import com.example.EventbusQuickadapterDemo.R;
 
 import permissions.dispatcher.NeedsPermission;
 import permissions.dispatcher.OnNeverAskAgain;

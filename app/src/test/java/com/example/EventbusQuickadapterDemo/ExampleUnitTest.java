@@ -1,4 +1,4 @@
-package com.example.intsigdemo;
+package com.example.EventbusQuickadapterDemo;
 
 import org.junit.Test;
 

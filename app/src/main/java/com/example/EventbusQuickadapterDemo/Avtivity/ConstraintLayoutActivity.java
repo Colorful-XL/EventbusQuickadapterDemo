@@ -1,4 +1,4 @@
-package com.example.intsigdemo.Avtivity;
+package com.example.EventbusQuickadapterDemo.Avtivity;
 
 import androidx.constraintlayout.widget.Group;
 
@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.intsigdemo.R;
+import com.example.EventbusQuickadapterDemo.R;
 
 public class ConstraintLayoutActivity extends BaseActivity implements View.OnClickListener {
 

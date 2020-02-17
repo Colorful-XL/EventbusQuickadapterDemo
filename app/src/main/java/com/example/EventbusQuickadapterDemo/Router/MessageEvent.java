@@ -1,4 +1,4 @@
-package com.example.intsigdemo.Router;
+package com.example.EventbusQuickadapterDemo.Router;
 
 public class MessageEvent {
     private String message;

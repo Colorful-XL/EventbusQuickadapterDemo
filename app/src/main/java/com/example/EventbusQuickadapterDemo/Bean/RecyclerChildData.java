@@ -1,16 +1,13 @@
-package com.example.intsigdemo.Bean;
+package com.example.EventbusQuickadapterDemo.Bean;
 
-import com.chad.library.adapter.base.entity.AbstractExpandableItem;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
-import com.example.intsigdemo.RecyclerViewAdapter.RecyclerAdapter;
+import com.example.EventbusQuickadapterDemo.RecyclerViewAdapter.RecyclerAdapter;
 
-public class RecyclerData extends AbstractExpandableItem<RecyclerChildData>
-        implements MultiItemEntity {
-
+public class RecyclerChildData implements MultiItemEntity {
     private String content;
     private Class targetClass;
 
-    public RecyclerData(String content, Class targetClass) {
+    public RecyclerChildData(String content, Class targetClass) {
         this.content = content;
         this.targetClass = targetClass;
     }
@@ -32,12 +29,7 @@ public class RecyclerData extends AbstractExpandableItem<RecyclerChildData>
     }
 
     @Override
-    public int getLevel() {
-        return 0;
-    }
-
-    @Override
     public int getItemType() {
-        return RecyclerAdapter.TYPE_ONE;
+        return RecyclerAdapter.TYPE_TOW;
     }
 }

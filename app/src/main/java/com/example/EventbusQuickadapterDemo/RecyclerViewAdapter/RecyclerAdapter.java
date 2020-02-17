@@ -1,17 +1,15 @@
-package com.example.intsigdemo.RecyclerViewAdapter;
+package com.example.EventbusQuickadapterDemo.RecyclerViewAdapter;
 
 import android.content.Intent;
-import android.transition.Visibility;
 import android.view.View;
-import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
-import com.example.intsigdemo.Bean.RecyclerChildData;
-import com.example.intsigdemo.Bean.RecyclerData;
-import com.example.intsigdemo.R;
+import com.example.EventbusQuickadapterDemo.Bean.RecyclerChildData;
+import com.example.EventbusQuickadapterDemo.Bean.RecyclerData;
+import com.example.EventbusQuickadapterDemo.R;
 
 import java.util.List;
 

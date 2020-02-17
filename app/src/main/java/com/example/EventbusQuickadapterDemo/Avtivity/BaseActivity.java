@@ -1,4 +1,4 @@
-package com.example.intsigdemo.Avtivity;
+package com.example.EventbusQuickadapterDemo.Avtivity;
 
 import android.os.Bundle;
 
