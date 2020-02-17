@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Avtivity.ConstraintLayoutActivity">
+
+
+    <!--    constraintlayout更加灵活，性能更高，减少嵌套层级-->
+    <!--    item1中加入goneMargin通过点击按钮观察效果,和item2中做对比-->
+    <TextView
+        android:id="@+id/item1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Normal: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textView1"
+        app:layout_constraintLeft_toRightOf="@id/item1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginLeft="30dp" />
+
+    <!--        把当前View的左边约束到text1的右边-->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="textView2"
+        app:layout_constraintLeft_toRightOf="@id/textView1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--    可以通过BaseLine来让不同高度的View中的字进行对齐-->
+    <TextView
+        android:id="@+id/item2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="BaseLine: "
+        app:layout_constraintLeft_toLeftOf="@id/item2"
+        app:layout_constraintTop_toTopOf="@id/item1" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="#4E4E4E"
+        android:gravity="center_vertical"
+        android:text="textView3"
+        app:layout_constraintBaseline_toBaselineOf="@id/item2"
+        app:layout_constraintLeft_toRightOf="@id/item2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#AAA6A6"
+        android:text="textView4"
+        app:layout_constraintBaseline_toBaselineOf="@id/textView3"
+        app:layout_constraintLeft_toRightOf="@+id/textView3" />
+
+    <!--    通过角度进行定位-->
+    <TextView
+        android:id="@+id/textViewViaAngle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textViewViaAngle"
+        app:layout_constraintCircle="@id/item2"
+        app:layout_constraintCircleAngle="120"
+        app:layout_constraintCircleRadius="200dp" />
+
+    <TextView
+        android:id="@+id/item3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Angle: "
+        app:layout_constraintBaseline_toBaselineOf="@id/textViewViaAngle"
+        app:layout_constraintLeft_toLeftOf="parent" />
+    <!--    居中以及偏移效果-->
+    <TextView
+        android:id="@+id/item4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Center/Bias:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item3" />
+
+    <TextView
+        android:id="@+id/textViewCenterHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textViewCenterHorizontal"
+        app:layout_constraintBaseline_toBaselineOf="@id/item4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewBias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="textViewBias"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewCenterHorizontal" />
+
+    <!--    当有宽或高至少有一个为0dp，也就是充满约束时，可以使用宽高比来进行形状约束-->
+    <TextView
+        android:id="@+id/item5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="DimensionRatio:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBias" />
+
+    <TextView
+        android:id="@+id/textViewDimensionRatio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="textViewDimensionRatio"
+        app:layout_constraintDimensionRatio="H,2:3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item5" />
+
+    <!--    多个View相互约束形成链的关系时，可以通过在链头中设置chainstyle来改变整条链的样式
+    还可以设置一个权重链-->
+    <!--    对于未知具体宽高的View，相对位置可能会出现偏差，此时可以使用Barrier屏障来对多个View的-->
+    <!--    位置视为一个整体，并按设置确定屏障的方向-->
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textViewDimensionRatio,item5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textViewSpreadByBarrier"
+        app:layout_constraintTop_toBottomOf="@id/barrier"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+<!--    可以对View进行分组，通过Group将多个View统一组织管理-->
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="textView3,textView1"/>
+
+
+    <!--    goneMargin主要用于约束的控件可见性为gone时的margin值-->
+    <Button
+        android:id="@+id/goneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="50dp"
+        android:text="不可见"
+        android:textColor="@drawable/selector_gone_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
